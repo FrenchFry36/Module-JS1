@@ -15,3 +15,11 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+
+function upperSnakeCase(textInput) {
+  const spaceToUnderscore = textInput.replaceAll(" ", "_"); // bla_bla_bla
+  const textToUpperCase = spaceToUnderscore.toUpperCase();
+  return textToUpperCase;
+}
+
+console.log(upperSnakeCase("bla bla bla"));
