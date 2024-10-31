@@ -52,8 +52,16 @@ function rotateCharacter(a, b) {
       targetOutput,
       alphabet[validOutputIndex]
     );
-    return targetOutputValue2;
+    if (a === a.toUpperCase() && a !== a.toLowerCase()) {
+      return targetOutputValue2.toUpperCase();
+    } else {
+      return targetOutputValue2;
+    }
   }
   const targetOutputValue = targetOutput.replace(targetOutput, outputIndex);
-  return targetOutputValue;
+  if (a === a.toUpperCase() && a !== a.toLowerCase()) {
+    return targetOutputValue.toUpperCase();
+  } else {
+    return targetOutputValue;
+  }
 }
