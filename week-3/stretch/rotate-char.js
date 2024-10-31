@@ -39,4 +39,21 @@ console.log(rotateCharacter("7", 5)); // Output: "7" (unchanged, not a letter)
 // When the rotateCharacter function is called with char and shift as inputs,
 // Then it should correctly rotate the character by shift positions within the alphabet while handling the wraparound,
 // And the function should return the rotated character as a string (e.g., 'z' rotated by 3 should become 'c', 'Z' rotated by 3 should become 'C').
-console.log(rotateCharacter("z", 1)); // Output: "a" (unchanged, not a letter)
+console.log(rotateCharacter("z", 2)); // Output: "a" (unchanged, not a letter)
+
+function rotateCharacter(a, b) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const inputIndex = alphabet.indexOf(a);
+  const targetOutput = "";
+  const outputIndex = alphabet[inputIndex + b];
+  if (inputIndex + b >= alphabet.length) {
+    const validOutputIndex = inputIndex + b - alphabet.length;
+    const targetOutputValue2 = targetOutput.replace(
+      targetOutput,
+      alphabet[validOutputIndex]
+    );
+    return targetOutputValue2;
+  }
+  const targetOutputValue = targetOutput.replace(targetOutput, outputIndex);
+  return targetOutputValue;
+}
