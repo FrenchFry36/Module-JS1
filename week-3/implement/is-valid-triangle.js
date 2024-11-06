@@ -51,4 +51,4 @@ function isValidTriangle(a, b, c) {
   }
 }
 
-console.log(isValidTriangle(3, 3, -2));
+module.exports = isValidTriangle;

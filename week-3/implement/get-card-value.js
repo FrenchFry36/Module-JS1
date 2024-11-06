@@ -45,12 +45,4 @@ function getCardValue(cardValue) {
   return "Invalid card rank.";
 }
 
-const currentOutput = getCardValue("A");
-const targetOutput = 11;
-
-console.assert(
-  currentOutput === targetOutput,
-  `current output is %s, target output is %s`,
-  currentOutput,
-  targetOutput
-);
+module.exports = getCardValue; // .js

@@ -56,11 +56,4 @@ function isProperFraction(fractionValue) {
   }
 }
 
-const currentOutput = isProperFraction("1/2");
-const targetOutput = true;
-console.assert(
-  currentOutput === targetOutput,
-  `current output is %s, target output is %s`,
-  currentOutput,
-  targetOutput
-);
+module.exports = isProperFraction;

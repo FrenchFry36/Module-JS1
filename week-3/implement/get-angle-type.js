@@ -1,5 +1,7 @@
 // Implement a function getAngleType, and tests for each of the acceptance criteria.
 
+const { test } = require("node:test");
+
 // Acceptance criteria:
 
 // Identify Right Angles:
@@ -39,4 +41,4 @@ function getAngleType(angle) {
   return "Write an angle value";
 }
 
-console.log(getAngleType(380));
+module.exports = getAngleType;
