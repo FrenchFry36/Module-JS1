@@ -18,13 +18,21 @@
 
 const countChar = (str, char) => {
   let index = 0;
+  let maxCount = 0;
+  let currentCount = 0;
   while (index < str.length) {
     if (str[index] === char) {
-      return index;
+      currentCount++;
+      maxCount = Math.max(maxCount, currentCount);
+    } else {
+      currentCount = 0;
     }
     index++;
   }
-  return -1;
+  return maxCount;
 };
 
-console.log(countChar("Then it should", "h"));
+console.log(countChar("aabaabaaaabaa", "a"));
+test("first test", () => {
+  expect(countChar("aabaabaaaabaa", "a")).toBe(4);
+});

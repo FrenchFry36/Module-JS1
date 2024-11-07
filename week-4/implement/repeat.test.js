@@ -23,3 +23,18 @@
 // Given a target string str and a negative integer count,
 // When the repeat function is called with these inputs,
 // Then it should throw an error or return an appropriate error message, as negative counts are not valid.
+
+const { error } = require("console");
+
+const repeat = (str, count) => {
+  if (count >= 0) {
+    const targetOutput = str.repeat(count);
+    return targetOutput;
+  }
+  return error;
+};
+
+console.log(repeat("ananda ", -1));
+test("jest debugger", () => {
+  expect(repeat("ananda ", 2)).toBe("ananda ananda ");
+});
